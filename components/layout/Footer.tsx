@@ -1,16 +1,38 @@
 import Link from "next/link";
+import Image from "next/image";
 import logoNew from "@/public/assets/logo-new.png";
+import {
+    BiChevronRight,
+    BiMapPin,
+    BiEnvelope,
+    BiLogoWhatsapp,
+    BiLogoFacebook,
+    BiLogoInstagram,
+    BiLogoLinkedin,
+    BiLogoTwitter
+} from "react-icons/bi";
 
-// ...
-<Image
-    src={logoNew}
-    alt="Original Assignment Help"
-    width={200}
-    height={50}
-    className="h-12 w-auto brightness-0 invert"
-    placeholder="blur"
-/>
-                        </Link >
+export default function Footer() {
+    return (
+        <footer className="bg-slate-900 text-slate-300 py-16 relative overflow-hidden">
+            {/* Decorative Elements */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-amber-500"></div>
+            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl rounded-bl-full pointer-events-none"></div>
+
+            <div className="container mx-auto px-4 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                    {/* Brand & Contact */}
+                    <div className="space-y-6">
+                        <Link href="/" className="block w-fit opacity-90 hover:opacity-100 transition-opacity">
+                            <Image
+                                src={logoNew}
+                                alt="Original Assignment Help"
+                                width={200}
+                                height={50}
+                                className="h-12 w-auto brightness-0 invert"
+                                placeholder="blur"
+                            />
+                        </Link>
                         <p className="text-slate-400 text-sm leading-relaxed">
                             Empowering students worldwide with premium academic assistance.
                             Trusted by 10,000+ top achievers.
@@ -51,10 +73,10 @@ import logoNew from "@/public/assets/logo-new.png";
                                 </div>
                             </div>
                         </div>
-                    </div >
+                    </div>
 
-    {/* Quick Links */ }
-    < div >
+                    {/* Quick Links */}
+                    <div>
                         <h4 className="text-lg font-heading font-bold text-white mb-6 flex items-center gap-2">
                             <span className="w-1 h-6 bg-amber-500 rounded-full"></span>
                             Quick Links
@@ -74,10 +96,10 @@ import logoNew from "@/public/assets/logo-new.png";
                                 </li>
                             ))}
                         </ul>
-                    </div >
+                    </div>
 
-    {/* Services */ }
-    < div >
+                    {/* Services */}
+                    <div>
                         <h4 className="text-lg font-heading font-bold text-white mb-6 flex items-center gap-2">
                             <span className="w-1 h-6 bg-indigo-500 rounded-full"></span>
                             Our Services
@@ -98,10 +120,10 @@ import logoNew from "@/public/assets/logo-new.png";
                                 </li>
                             ))}
                         </ul>
-                    </div >
+                    </div>
 
-    {/* Social */ }
-    < div >
+                    {/* Social */}
+                    <div>
                         <h4 className="text-lg font-heading font-bold text-white mb-6 flex items-center gap-2">
                             <span className="w-1 h-6 bg-purple-500 rounded-full"></span>
                             Connect With Us
@@ -128,18 +150,18 @@ import logoNew from "@/public/assets/logo-new.png";
                                 </a>
                             ))}
                         </div>
-                    </div >
-                </div >
+                    </div>
+                </div>
 
-    {/* Bottom Bar */ }
-    < div className = "border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500" >
+                {/* Bottom Bar */}
+                <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Original Assignment Help. All Rights Reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
                         <Link href="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</Link>
                     </div>
-                </div >
-            </div >
-        </footer >
+                </div>
+            </div>
+        </footer>
     );
 }
