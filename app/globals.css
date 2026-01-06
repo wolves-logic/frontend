@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modern Indigo/Violet Theme */
+  --color-primary: #4f46e5;
+  /* Indigo 600 - More vibrant */
+  --color-primary-dark: #4338ca;
+  /* Indigo 700 */
+  --color-primary-light: #818cf8;
+  /* Indigo 400 */
+
+  --color-secondary: #f59e0b;
+  /* Amber 500 - Rich Gold accent */
+  --color-secondary-dark: #d97706;
+  /* Amber 600 */
+
+  --color-background: #ffffff;
+  --color-surface: #f8fafc;
+  /* Slate 50 */
+
+  --color-text-main: #0f172a;
+  /* Slate 900 */
+  --color-text-muted: #475569;
+  /* Slate 600 */
+  --color-text-light: #94a3b8;
+  /* Slate 400 */
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-outfit);
+  --font-body: var(--font-inter);
+
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-glow: 0 0 15px rgba(79, 70, 229, 0.3);
+  --shadow-premium: 0 20px 40px -5px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #0f172a;
+}
+
+/* --- Global Reset & Base --- */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Subtle noise texture for depth - Disabled for build stability */
+  /* background-image: url("..."); */
+}
+
+/* Custom Selection Color */
+::selection {
+  background: rgba(79, 70, 229, 0.2);
+  /* Primary with opacity */
+  color: var(--color-primary-dark);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cfd8dc;
+  border-radius: 5px;
+  border: 2px solid #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* --- Custom Utilities --- */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-secondary), #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@layer components {
+
+  /* Modern Button Base */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-primary text-white py-2.5 px-6 shadow-lg shadow-indigo-500/25 hover:bg-primary-dark hover:shadow-indigo-500/40 hover:-translate-y-0.5 focus:ring-indigo-500;
+  }
+
+  .btn-primary-lg {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-primary text-white py-3.5 px-8 text-lg shadow-xl shadow-indigo-500/30 hover:bg-primary-dark hover:shadow-indigo-500/50 hover:-translate-y-0.5 focus:ring-indigo-500;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-secondary text-white py-2.5 px-6 shadow-lg shadow-amber-500/25 hover:bg-secondary-dark hover:shadow-amber-500/40 hover:-translate-y-0.5 focus:ring-amber-500;
+  }
+
+  .btn-secondary-lg {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 bg-secondary text-white py-3.5 px-8 text-lg shadow-xl shadow-amber-500/30 hover:bg-secondary-dark hover:shadow-amber-500/50 hover:-translate-y-0.5 focus:ring-amber-500;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-primary text-primary py-2 px-6 hover:bg-primary hover:text-white hover:-translate-y-0.5 focus:ring-indigo-500;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center rounded-full font-bold transition-all duration-300 cursor-pointer active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-white/80 text-white py-2.5 px-6 hover:bg-white hover:text-primary hover:border-white shadow-lg shadow-black/10 focus:ring-white;
+  }
+
+  /* Premium Card Styles */
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-100/50 border border-slate-100 bg-white rounded-3xl overflow-hidden;
+  }
+}
+
+/* --- Animations --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Utility Delays */
+.delay-100 {
+  animation-delay: 0.1s;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-300 {
+  animation-delay: 0.3s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
