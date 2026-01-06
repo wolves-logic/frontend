@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoNew from "@/public/assets/logo-new.png";
 import { BiEnvelope, BiLockAlt, BiArrowBack } from "react-icons/bi";
 
 export default function Login() {

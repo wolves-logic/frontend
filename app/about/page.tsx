@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import { BiShield, BiDiamond, BiGroup, BiTrophy, BiGlobe, BiHappyHeartEyes } from "react-icons/bi";
+import heroBg from "@/public/assets/hero-bg.jpg";
 import SectionHeader from "@/components/ui/SectionHeader";
 
 export default function About() {

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoNew from "@/public/assets/logo-new.png";
 import { BiUser, BiEnvelope, BiLockAlt, BiArrowBack, BiCheckCircle } from "react-icons/bi";
 
 export default function Signup() {
