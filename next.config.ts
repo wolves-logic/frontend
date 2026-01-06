@@ -12,7 +12,6 @@ const nextConfig: NextConfig = {
   // IMPORTANT: This must match your GitHub Repo name
   // If your repo is https://github.com/wolves-logic/frontend, this should be '/frontend'
   basePath: isProd ? '/frontend' : '',
-  assetPrefix: isProd ? '/frontend' : '',
 };
 
 export default nextConfig;
