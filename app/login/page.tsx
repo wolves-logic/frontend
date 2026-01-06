@@ -27,11 +27,12 @@ export default function Login() {
                         </Link>
                         <Link href="/" className="block mb-6">
                             <Image
-                                src="/assets/logo-new.png"
+                                src={logoNew}
                                 alt="Logo"
                                 width={200}
                                 height={50}
                                 className="h-14 w-auto"
+                                placeholder="blur"
                             />
                         </Link>
                         <h1 className="text-3xl font-heading font-bold text-primary mb-2">Login to your account</h1>

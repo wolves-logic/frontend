@@ -55,7 +55,7 @@ export default function About() {
                             {/* Placeholder image that works well */}
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
                                 <Image
-                                    src="/assets/hero-bg.jpg" // Reusing hero-bg or a reliable placeholder if prefered
+                                    src={heroBg} // Reusing hero-bg or a reliable placeholder if prefered
                                     alt="Team collaboration"
                                     width={800}
                                     height={600}

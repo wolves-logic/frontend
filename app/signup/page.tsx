@@ -87,11 +87,12 @@ export default function Signup() {
                 <div className="relative z-10 max-w-md mx-auto">
                     <div className="mb-8">
                         <Image
-                            src="/assets/logo-new.png"
+                            src={logoNew}
                             alt="Logo"
                             width={250}
                             height={60}
                             className="h-14 w-auto brightness-0 invert"
+                            placeholder="blur"
                         />
                     </div>
                     <h2 className="text-3xl font-heading font-bold mb-8">Why Join Us?</h2>
