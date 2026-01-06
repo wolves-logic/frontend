@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import heroBg from "@/public/assets/hero-bg.jpg";
 import { BiGridAlt, BiCheckShield, BiTime, BiAward, BiLogoWhatsapp, BiStar } from "react-icons/bi";
 
 export default function Hero() {
@@ -8,11 +9,12 @@ export default function Hero() {
             {/* Background Image & Overlay */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="/assets/hero-bg.jpg"
+                    src={heroBg}
                     alt="Students studying"
                     fill
                     priority
                     className="object-cover"
+                    placeholder="blur"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-900/95 via-indigo-950/90 to-purple-900/80"></div>
 

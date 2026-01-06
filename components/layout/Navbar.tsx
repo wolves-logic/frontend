@@ -30,6 +30,8 @@ import {
 
 // --- Configuration & Data ---
 
+import logoNew from "@/public/assets/logo-new.png";
+
 const navLinks = [
     { href: "/", label: "Home", icon: BiHomeAlt },
     {
@@ -114,12 +116,13 @@ export default function Navbar() {
                     {/* --- Logo --- */}
                     <Link href="/" className="flex-shrink-0 relative group z-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded-lg">
                         <Image
-                            src="/assets/logo-new.png"
+                            src={logoNew}
                             alt="Original Assignment Help"
                             width={220}
                             height={50}
                             className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-[1.02]"
                             priority
+                            placeholder="blur"
                         />
                     </Link>
 
