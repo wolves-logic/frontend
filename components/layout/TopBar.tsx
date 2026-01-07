@@ -13,7 +13,7 @@ export default function TopBar() {
             <div className="container mx-auto flex justify-center items-center gap-2">
                 <BiSolidOffer className="text-lg animate-pulse text-yellow-300" />
                 <p className="tracking-wide">
-                    Special Offer: Get <span className="font-bold text-yellow-300">10% OFF</span> on your current order!
+                    Special Offer: Get <span className="font-bold text-yellow-300">10% OFF</span> on First order only!
                     Use code: <span className="font-bold bg-white/20 px-2 py-0.5 rounded ml-1 border border-white/30 backdrop-blur-sm">SAVE10</span>
                 </p>
                 <button

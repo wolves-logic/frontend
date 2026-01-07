@@ -47,7 +47,7 @@ export default function Contact() {
                                         <BiMapPin />
                                     </div>
                                     <h4 className="font-bold text-slate-900 text-lg mb-2 relative z-10">Branch Office</h4>
-                                    <p className="text-slate-500 text-sm leading-relaxed relative z-10">L. B. Nagar, Hyderabad, Telangana, India</p>
+                                    <p className="text-slate-500 text-sm leading-relaxed relative z-10">Near Kamineni Hospital, LB Nagar, Hyderabad, Telangana, India - 500074</p>
                                 </div>
 
                                 <div className="p-8 bg-white border border-slate-100 rounded-[2rem] shadow-soft hover:shadow-premium hover:-translate-y-2 transition-all duration-300 group relative overflow-hidden">
@@ -136,7 +136,7 @@ export default function Contact() {
 
                     <div className="relative h-full">
                         <iframe
-                            src="https://maps.google.com/maps?q=L.+B.+Nagar,+Hyderabad,+Telangana,+India&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            src="https://maps.google.com/maps?q=Near+Kamineni+Hospital,+LB+Nagar,+Hyderabad,+Telangana,+India+-+500074&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             width="100%"
                             height="100%"
                             style={{ border: 0 }}
