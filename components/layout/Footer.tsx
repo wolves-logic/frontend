@@ -157,9 +157,15 @@ export default function Footer() {
                 <div className="border-t border-slate-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500">
                     <p>&copy; {new Date().getFullYear()} Original Assignment Help. All Rights Reserved.</p>
                     <div className="flex gap-6 mt-4 md:mt-0">
-                        <Link href="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link>
-                        <Link href="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-conditions" className="hover:text-indigo-400 transition-colors">Terms & Conditions</Link>
+                        <Link href="/refund-policy" className="hover:text-indigo-400 transition-colors">Refund Policy</Link>
                     </div>
+                </div>
+
+                {/* Powered By */}
+                <div className="text-center text-xs text-slate-600 mt-8 pb-2">
+                    <p>Operated by <span className="text-slate-500 font-semibold">Harviera IT Solutions</span></p>
                 </div>
             </div>
         </footer>
